@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const features = [
   {
     // Diamond Jewel Icon
@@ -50,7 +48,7 @@ export function Solutions() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div 
               key={feature.title} 
               className="flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300"

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Navigation } from '../components/Navigation'
 
 interface CarouselImage {
   id: number;

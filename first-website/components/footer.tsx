@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export function Footer() {
     return (
         <footer className="bg-gradient-to-r from-[#2d5016] to-[#3d7c47] text-white py-12">
