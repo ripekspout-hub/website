@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 export function Navigation() {
     
     const [isScrolled, setIsScrolled] = useState(false);
-    const [prevScrollY, setPrevScrollY] = useState(0);
+    const [_, setPrevScrollY] = useState(0);
     const navigate = useNavigate();
     const location = useLocation();
 

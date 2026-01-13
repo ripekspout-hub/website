@@ -17,7 +17,7 @@ interface ProductCardProps {
     rating?: number;
 }
 
-export function ProductCard({ id, name, category, description, images, specs, rating = 5 }: ProductCardProps) {
+export function ProductCard({ id, name, description, images, rating = 5 }: ProductCardProps) {
   const navigate = useNavigate();
 
   return (
