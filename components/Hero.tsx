@@ -16,10 +16,10 @@ export function Hero() {
     const carouselRef = useRef<HTMLDivElement>(null);
 
     const images: CarouselImage[] = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80', alt: 'Natural skincare product 1' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80', alt: 'Natural skincare product 2' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80', alt: 'Natural skincare product 3' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&q=80', alt: 'Natural skincare product 4' },
+    { id: 1, url: `${import.meta.env.BASE_URL}spout_1.jpg`, alt: 'spout bag medium' },
+    { id: 2, url: `${import.meta.env.BASE_URL}spout_side_medium.jpeg`, alt: 'Spout bag medium' },
+    { id: 3, url: `${import.meta.env.BASE_URL}spout_4.jpg`, alt: 'spout bag medium' },
+    { id: 4, url: `${import.meta.env.BASE_URL}spout_5.jpg`, alt: 'spout bag with handle' },
     ];
 
     // Parallax effect on mouse move

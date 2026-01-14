@@ -10,49 +10,49 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Spout Bag Small",
-    description: "Immersive sound quality with active noise cancellation",
-    images: [`${import.meta.env.BASE_URL}spout_1.jpg`, `${import.meta.env.BASE_URL}spout_2.jpg`, `${import.meta.env.BASE_URL}spout_3.jpg`, `${import.meta.env.BASE_URL}spout_4.jpg`],
+    name: "Spout Side Bag Small",
+    description: "Small spout bag perfect for liquids and gels with spout nozzle at the side.",
+    images: [`${import.meta.env.BASE_URL}spout_side_small.jpeg`],
     specs: [
-      { label: "Length", value: "130 mm" },
-      { label: "Width", value: "190 mm" },
+      { label: "Length", value: "100 mm" },
+      { label: "Width", value: "120 mm" },
       { label: "Thickness", value: "130 mic" },
       { label: "Nozzle Diameter", value: "10mm" }
     ]
   },
   {
     id: "2",
-    name: "Spout Bag Large",
-    description: "Immersive sound quality with active noise cancellation",
-    images: [],
+    name: "Spout Center Bag Small",
+    description: "Small spout bag perfect for liquids and gels with spout nozzle at the center.",
+    images: [`${import.meta.env.BASE_URL}spout_center_small.jpeg`],
     specs: [
-      { label: "Length", value: "130 mm" },
-      { label: "Width", value: "190 mm" },
-      { label: "Thickness", value: "130 mic" },
-      { label: "Nozzle Diameter", value: "22mm" }
+      { label: "Length", value: "90 mm" },
+      { label: "Width", value: "120 mm" },
+      { label: "Thickness", value: "145 mic" },
+      { label: "Nozzle Diameter", value: "25mm" }
     ]
   },
   {
     id: "3",
-    name: "Spout Bag Small 2",
+    name: "Spout Side Bag Medium",
     category: "Spout Bag",
-    description: "Immersive sound quality with active noise cancellation",
-    images: [],
+    description: "Medium spout bag perfect for liquids and gels with spout nozzle at the side.",
+    images: [`${import.meta.env.BASE_URL}spout_side_medium.jpeg`],
     specs: [
-      { label: "Length", value: "130 mm" },
-      { label: "Width", value: "190 mm" },
+      { label: "Length", value: "200 mm" },
+      { label: "Width", value: "230 mm" },
       { label: "Thickness", value: "130 mic" },
       { label: "Nozzle Diameter", value: "26mm" }
     ]
   },
   {
     id: "4",
-    name: "Spout Bag Small 3",
-    description: "Immersive sound quality with active noise cancellation",
-    images: [],
+    name: "Spout Side Bag Medium with Handle",
+    description: "Medium spout bag perfect for liquids and gels with spout nozzle at the side and a handle.",
+    images: [`${import.meta.env.BASE_URL}spout_side_medium_with_handle.jpeg`],
     specs: [
-      { label: "Length", value: "130 mm" },
-      { label: "Width", value: "190 mm" },
+      { label: "Length", value: "200 mm" },
+      { label: "Width", value: "250 mm" },
       { label: "Thickness", value: "130 mic" },
       { label: "Nozzle Diameter", value: "22mm" }
     ]
