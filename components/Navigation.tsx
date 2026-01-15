@@ -116,7 +116,7 @@ export function Navigation() {
                 className="transition-all duration-500 ease-in-out"
             >
                 <img 
-                    src={isScrolled ? `${import.meta.env.BASE_URL}logo.png` : `${import.meta.env.BASE_URL}bordered.png`} 
+                    src={`${import.meta.env.BASE_URL}transparent.png`} 
                     alt="repack logo" 
                     className={`
                         w-auto transition-all duration-500 ease-in-out

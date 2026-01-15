@@ -3,10 +3,6 @@ import { ProductCard } from "../components/ProductCard";
 import { products } from "../data/products";
 
 export function ProductsPage() {
-    // const [Products, setProducts] = useState<Product[]>([])
-    // const [loading, setLoading] = useState<boolean>(true)
-    // const [error, setError] = useState<string | null>(null)
-
     const navigate = useNavigate();
     
     const topProducts = products.slice(0, 4); // Show top 4 products

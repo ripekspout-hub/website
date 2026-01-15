@@ -1,18 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 import { Card } from './ui/card';
 
 
 interface ProductCardProps {
-//   item_id: string;
-//   item_name: string;
-//   item_desc: string;
-//   item_img: string;
-//   rating?: number; // Made optional
     id: string;
     name: string;
     category?: string;
     description: string;
-    images: string[];
+    images?: string[];
     specs: { label: string; value: string }[];
     rating?: number;
 }
@@ -20,7 +16,12 @@ interface ProductCardProps {
 export function ProductCard({ id, name, description, images, rating = 5 }: ProductCardProps) {
   const navigate = useNavigate();
 
+  const [imageError, setImageError] = useState(false);
+  const showComingSoon = !images || images.length === 0 || imageError;
+  console.log(showComingSoon)
+
   return (
+    
     <Card 
       className="group overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
       onClick={() => navigate(`/products/${id}`)}
@@ -29,15 +30,25 @@ export function ProductCard({ id, name, description, images, rating = 5 }: Produ
         
         {/* Image Section */}
         <div className="relative overflow-hidden aspect-square bg-slate-100">
-          <img 
-            src={images[0]} 
-            alt={name}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            onError={(e) => {
-              // Fallback image if the URL is broken (like 'aaaa')
-              (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300?text=No+Image';
-            }}
-          />
+          {showComingSoon ? (
+              <div className="coming-soon-placeholder">
+                <span className="coming-soon-icon">📦</span>
+                <h3>Coming Soon</h3>
+                <p>{name}</p>
+              </div>
+          )
+          : (
+            <img 
+              src={images[0]} 
+              alt={name}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onError={(e) => {
+                // Fallback image if the URL is broken (like 'aaaa')
+                (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300?text=No+Image';
+              }}
+            />
+            )
+          }
         </div>
         
         {/* Content Section */}

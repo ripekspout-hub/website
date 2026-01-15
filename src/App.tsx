@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer'
 import { HomePage } from '../pages/homepage'
 import { ProductsPage } from '../pages/products'
 import { ProductDetailPage } from '../pages/ProductDetailPage'
-import { WhatsappButton } from '../components/WhatsappButton'
+import { WhatsAppButton } from '../components/WhatsAppButton'
 
 import './App.css'
 import { Navigation } from '../components/Navigation'
@@ -29,7 +29,7 @@ function App() {
           </Routes>
 
       </main>
-      <WhatsappButton />
+      <WhatsAppButton />
       <Footer />
     </div>
 

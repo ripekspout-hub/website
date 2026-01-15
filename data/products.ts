@@ -37,7 +37,7 @@ export const products: Product[] = [
     name: "Spout Side Bag Medium",
     category: "Spout Bag",
     description: "Medium spout bag perfect for liquids and gels with spout nozzle at the side.",
-    images: [`${import.meta.env.BASE_URL}spout_side_medium.jpeg`],
+    images: [``],
     specs: [
       { label: "Length", value: "200 mm" },
       { label: "Width", value: "230 mm" },
@@ -49,7 +49,7 @@ export const products: Product[] = [
     id: "4",
     name: "Spout Side Bag Medium with Handle",
     description: "Medium spout bag perfect for liquids and gels with spout nozzle at the side and a handle.",
-    images: [`${import.meta.env.BASE_URL}spout_side_medium_handle.jpeg`],
+    images: [],
     specs: [
       { label: "Length", value: "200 mm" },
       { label: "Width", value: "250 mm" },
