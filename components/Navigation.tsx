@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation, href } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 export function Navigation() {
@@ -144,7 +144,7 @@ export function Navigation() {
                     <a
                         key={link.href}
                         href={link.href == 'repackpouch.com' ? "https://www.repackpouch.com" : link.href}
-                        onClick={link.href == 'repackpouch.com' ? null : (e) => handleClick(e, link.href)}
+                        onClick={link.href == 'repackpouch.com' ? undefined : (e) => handleClick(e, link.href)}
                         className={`
                             text-sm font-medium relative
                             transition-all duration-300 ease-out
