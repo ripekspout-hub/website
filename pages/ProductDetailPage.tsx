@@ -50,7 +50,7 @@ export function ProductDetailPage() {
             >
                 Home
             </button>
-            <span className="text-slate-900 font-medium">{product.category}</span>
+            {/* <span className="text-slate-900 font-medium">{product.category}</span> */}
             </nav>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -71,29 +71,29 @@ export function ProductDetailPage() {
                     </div>
 
                     {/* Thumbnail Gallery */}
-                    <div className="grid grid-cols-3 gap-4">
-                        {product.images.map((image, index) => (
-                            <button
-                            key={index}
-                            onClick={() => setSelectedImage(index)}
-                            className={`
-                                aspect-square rounded-lg overflow-hidden transition-all duration-300
-                                ${selectedImage === index 
-                                ? 'ring-4 ring-[#3d7c47] scale-95' 
-                                : 'hover:scale-95 opacity-70 hover:opacity-100'
-                                }
-                            `}
-                            >
-                            <img
-                                src={image}
-                                alt={`${product.name} view ${index + 1}`}
-                                className="w-full h-full object-cover"
-                            />
-                            </button>
-                        ))}
+                    <div className="relative">
+                        <div className="flex gap-3 overflow-x-auto pb-2 scroll-smooth scrollbar-thin scrollbar-thumb-[#4A5D3B] scrollbar-track-gray-200">
+                            {product.images.map((image, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setSelectedImage(index)}
+                                    className={`
+                                        flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all duration-200
+                                        ${selectedImage === index 
+                                            ? 'ring-2 ring-[#4A5D3B] opacity-100' 
+                                            : 'opacity-60 hover:opacity-100'
+                                        }
+                                    `}
+                                >
+                                    <img
+                                        src={image}
+                                        alt={`${product.name} view ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </button>
+                            ))}
+                        </div>
                     </div>
-
-
                 </div>
 
 
@@ -118,13 +118,13 @@ export function ProductDetailPage() {
                     <div className="flex items-center gap-3 text-slate-600">
                         <ul>
                             <li>
-                                <span className="font-medium">Size: {product.specs[0].value} x {product.specs[1].value}</span>
+                                <span className="font-medium">Available Sizes: <br/>{product.specs[0].value} x {product.specs[1].value}</span>
                             </li>
                             <li>
-                                <span className="font-medium">Thickness: {product.specs[2].value}</span>
+                                <span className="font-medium"><br/>Available Thickness: <br/>{product.specs[2].value}</span>
                             </li>
                             <li>
-                                <span className="font-medium">Nozzle Diameter: {product.specs[3].value}</span>
+                                <span className="font-medium"><br/>Available Nozzle Diameters: <br/>{product.specs[3].value}</span>
                             </li>
                         </ul>                    
                     </div>

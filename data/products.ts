@@ -11,6 +11,7 @@ export const products: Product[] = [
   {
     id: "1",
     name: "Spout Side Bag Small",
+    category: "Spout Bag",
     description: "Small spout bag perfect for liquids and gels with spout nozzle at the side.",
     images: [`${import.meta.env.BASE_URL}spout_side_small.jpeg`, `${import.meta.env.BASE_URL}S-front.jpeg`, `${import.meta.env.BASE_URL}S-back.jpeg`,  `${import.meta.env.BASE_URL}S-front_1.jpeg`,  `${import.meta.env.BASE_URL}S-back_1.jpeg`, `${import.meta.env.BASE_URL}S-front_2.jpeg`, `${import.meta.env.BASE_URL}S-back_2.jpeg`],
     specs: [
@@ -23,6 +24,7 @@ export const products: Product[] = [
   {
     id: "2",
     name: "Spout Center Bag Small",
+    category: "Spout Bag",
     description: "Small spout bag perfect for liquids and gels with spout nozzle at the center.",
     images: [`${import.meta.env.BASE_URL}spout_center_small.jpeg`],
     specs: [
@@ -48,6 +50,7 @@ export const products: Product[] = [
   {
     id: "4",
     name: "Spout Side Bag Medium with Handle",
+    category: "Spout Bag",
     description: "Medium spout bag perfect for liquids and gels with spout nozzle at the side and a handle.",
     images: [ `${import.meta.env.BASE_URL}spout_side_medium_handle.jpeg`],
     specs: [
